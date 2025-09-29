@@ -1,0 +1,48 @@
+/* 제목 */
+#title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container {
+    display: flex;
+    /* flex-direction: row; */
+    align-items: flex-start;
+    padding: 20px;
+    gap: 30px;
+    background-color: blanchedalmond;
+}
+
+/* 왼쪽 메뉴바 */
+#introduction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    /* gap 간격 */
+    gap: 15px;
+    background-color: yellow; 
+
+}
+
+
+main {
+    flex-grow: 1;
+    /* border: 2px solid black; */
+    padding: 20px;
+}
+
+/* 중앙 정렬된 footer */
+#links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    background-color: aqua  ;
+}
+
+#slider {
+    width: 2500px;
+    height: 1000px;
+}
