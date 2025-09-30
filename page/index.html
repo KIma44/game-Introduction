@@ -1,52 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>game hub</title>
+    <title>Game Hub | 발로란트 소개</title>
+    <link rel="stylesheet" href="index.css">
 </head>
-<link rel="stylesheet" href="index.css">
 <body>
     <header>
         <h1 id="title">발로란트 게임 소개</h1>
-        <input type="text">
-        <button>검색</button>
+        <div class="search-wrapper">
+  <button class="search-btn" id="searchBtn">
+    <img src="search-icon.png" alt="검색">
+  </button>
+  <div class="search-input-wrapper" id="searchBox">
+    <img src="../images/search.jpg" class="icon">
+    <input type="text" id="searchInput" placeholder="검색어를 입력하세요">
+    <span class="close-icon" id="closeBtn">&times;</span>
+  </div>
+</div>
     </header>
 
-    <div >
-        <nav id="introduction">
-            <a href="character.html">캐릭터</a>
-            <a href="gun.html">총</a>
-            <a href="map.html">맵</a>
-            <a href="night market.html">야시장</a>
-        </nav>
+    <nav id="introduction">
+        <a href="character.html">캐릭터</a>
+        <a href="gun.html">총</a>
+        <a href="map.html">맵</a>
+        <a href="night market.html">야시장</a>
+    </nav>
 
+    <div id="container">
         <main>
-            <p>발로란트는 라이엇 게임즈에서 개발한 전술 슈팅 게임으로, 플레이어는 두 팀으로 나뉘어 서로 대결합니다. 각 팀은 5명의 요원으로 구성되며, 공격팀과 수비팀으로 역할을 나누어 13라운드를 먼저 승리하는 것이 목표입니다. 각 라운드에서 플레이어는 하나의 목숨을 가지고 있으며, 스파이크라는 폭탄을 설치하거나 해체하는 것이 주요 목표입니다.</p>
-            <h4>로그인 창</h4>
-            <div id="id">
-                <label>
-                    아이디
-                    <input type="text">
-                </label>
-                <label>
-                    비밀번호
-                    <input type="password">
-                </label>
-                <div>
-                    <img id="slider" src="../images/챔피언스2021.jpg">
-                </div>
-            </div>
+            <section class="description">
+                <p>
+                    발로란트는 라이엇 게임즈에서 개발한 전술 슈팅 게임으로, 플레이어는 두 팀으로 나뉘어 서로 대결합니다. 
+                    각 팀은 5명의 요원으로 구성되며, 공격팀과 수비팀으로 역할을 나누어 13라운드를 먼저 승리하는 것이 목표입니다.
+                    각 라운드에서 플레이어는 하나의 목숨을 가지고 있으며, 스파이크라는 폭탄을 설치하거나 해체하는 것이 주요 목표입니다.
+                </p>
+            </section>
+
+            <section class="login-section">
+                <h2>로그인</h2>
+                <form class="login-form">
+                    <label>아이디
+                        <input type="text" placeholder="아이디 입력">
+                    </label>
+                    <label>비밀번호
+                        <input type="password" placeholder="비밀번호 입력">
+                    </label>
+                    <button type="submit">로그인</button>
+                </form>
+            </section>
+
+            <section class="image-slider">
+                <img id="slider" src="../images/챔피언스2021.jpg" alt="발로란트 이미지">
+            </section>
         </main>
     </div>
 
     <footer>
         <div id="links">
-            <a href="https://playvalorant.com/ko-kr/">발로란트 다운로드 링크</a>
-            <a href="https://dak.gg/valorant/crosshair?type=all&category=all&sort=new&page=1">조준점 공유 링크</a>
+            <a href="https://playvalorant.com/ko-kr/">발로란트 다운로드</a>
+            <a href="https://dak.gg/valorant/crosshair?type=all&category=all&sort=new&page=1">조준점 공유</a>
         </div>
     </footer>
+
     <script src="index.js"></script>
 </body>
-
 </html>

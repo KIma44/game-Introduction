@@ -23,3 +23,18 @@ setInterval(() => {
     }, 3000); // 3초
 
 console.log('dda')
+
+const searchBtn = document.getElementById("searchBtn");
+const searchBox = document.getElementById("searchBox");
+const closeBtn = document.getElementById("closeBtn");
+const input = document.getElementById("searchInput");
+
+searchBtn.addEventListener("click", () => {
+  searchBox.classList.add("active");
+  input.focus();
+});
+
+closeBtn.addEventListener("click", () => {
+  searchBox.classList.remove("active");
+  input.value = "";
+});
