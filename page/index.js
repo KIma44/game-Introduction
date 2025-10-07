@@ -10,6 +10,7 @@ links.forEach(link => {
     });
 });
 
+// 이미지 시간 지나면 바뀌는 기능
 const imgList = ["../images/챔피언스2021.jpg",
     "../images/2022챔피언스.jpg", "../images/2024챔피언스.jpg"
 ];
@@ -24,6 +25,8 @@ setInterval(() => {
 
 console.log('dda')
 
+
+// 검색 창 기능
 const searchBtn = document.getElementById("searchBtn");
 const searchBox = document.getElementById("searchBox");
 const closeBtn = document.getElementById("closeBtn");
