@@ -138,6 +138,75 @@ header {
     margin-bottom: 30px;
 }
 
+/* -------------------- 게임 진행 단계 -------------------- */
+.gamemode-flow {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #007bff;
+}
+
+.gamemode-flow h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #202020;
+}
+
+.gamemode-flow .step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding-left: 10px;
+    position: relative;
+    border-left: 2px solid #ddd;
+}
+
+.gamemode-flow .step::before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: 20px;
+    width: 12px;
+    height: 12px;
+    background-color: #007bff;
+    border-radius: 50%;
+    border: 2px solid white;
+    z-index: 1;
+}
+
+.gamemode-flow .circle {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.gamemode-flow .text h3 {
+    margin: 0 0 8px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.gamemode-flow .text p {
+    margin: 0;
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
 /* -------------------- 이미지 슬라이더 -------------------- */
 .image-slider img {
     width: 100%;
