@@ -1,0 +1,135 @@
+body {
+  font-family: 'Pretendard', sans-serif;
+  background-color: #0e1821;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+}
+
+header {
+  background-color: #111;
+  padding: 20px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+h1 {
+  font-size: 28px;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+/* 요원 카드 */
+.agent-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 15px;
+  width: 350px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* 이미지 박스 */
+/* 이미지 박스 */
+.agent-img-box {
+  width: 300px;
+  height: 400px;  /* 세로 크기를 조금 키워 균형 맞춤 */
+  overflow: hidden;
+  border-radius: 12px;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* 이미지 */
+.agent-img-box img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;     /* 세로 크기 한정 */
+  object-fit: contain;   /* 이미지 전체가 박스 안에 들어가게 */
+  background-color: #111;
+  transition: transform 0.4s ease;
+}
+
+.agent-img-box img:hover {
+  transform: scale(1.05);
+}
+
+
+.agent-img-box img:hover {
+  transform: scale(1.1);
+}
+
+/* 텍스트 */
+#agent-name {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+#agent-role {
+  color: #f05d23;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#agent-description {
+  font-size: 15px;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  max-width: 320px;
+}
+
+#agent-skills {
+  text-align: left;
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #ddd;
+}
+
+/* 버튼 */
+.button-box {
+  margin-top: 20px;
+}
+
+.button-box button {
+  background-color: #f05d23;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.button-box button:hover {
+  background-color: #ff784f;
+  transform: scale(1.05);
+}
+
+/* footer */
+footer {
+  margin-top: 40px;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fff;
+}

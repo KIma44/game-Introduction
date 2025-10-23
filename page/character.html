@@ -1,47 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Character</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>발로란트 요원 소개</title>
+  <link rel="stylesheet" href="character.css">
 </head>
 <body>
-    <header>
-        <h1>요원 소개</h1>
-    </header>
-    
-    <main>
-        <div>
-            요원별로 역할이 있는데
-            각각 대표적인 요원 1명만 스킬 설명 이미지 가져오고 아닌면 이미지 바뀌면서 스킬 설명도 바뀌는 것로
-        </div>
-        <div>
-            <h4>타격대</h4>
-            <p>타격대는 엔트리 (entry) 곧 사이트에 제일 먼저 들어가는 역할군입니다
-                타격대는 제트
-            </p>
-        </div>
-        <div>
-            <h4>척후대</h4>
-            <p>팀의 전투 지역 진입을 지원하고 적의 정보를 수집하는 중요한 역할을 수행합니다
-                척후대는 소바로
-            </p>
-        </div>
-        <div>
-            <h4>감시자</h4>
-            <p>감시자 역할은 팀의 방어와 정보 수집을 담당하다
-                감시자는 세이지로
-            </p>
-        </div>
-        <div>
-            <h4>전략가</h4>
-            <p>전략가는 팀의 전술적 지원을 담당하며, 연막 스킬을 통해 시야를 차단하고 아군의 공격을 돕는 중요한 역할을 합니다
-                전략가는 브림스톤으로
-            </p>
-        </div>
-    </main>
-    <footer>
-        <a href="https://playvalorant.com/ko-kr/agents/">모든 요원 링크</a>
-    </footer>
+  <header>
+    <h1>발로란트 요원 소개</h1>
+  </header>
+
+  <main>
+    <div class="agent-card">
+      <div class="agent-img-box">
+        <img id="agent-img" src="../images/제트.png">
+      </div>
+
+      <h2 id="agent-name">제트</h2>
+      <p id="agent-role">타격대</p>
+      <p id="agent-description">
+        빠르고 민첩한 공격수로, 적진을 교란시키며 팀의 핵심 공격을 담당합니다.
+      </p>
+
+      <ul id="agent-skills">
+        <li>Cloudburst: 연막 수류탄</li>
+        <li>Updraft: 상승</li>
+        <li>Tailwind: 순간 이동</li>
+        <li>Blade Storm: 폭풍검</li>
+      </ul>
+    </div>
+
+    <div class="button-box">
+      <button onclick="showAgent('duelist')">제트</button>
+      <button onclick="showAgent('initiator')">소바</button>
+      <button onclick="showAgent('sentinel')">세이지</button>
+      <button onclick="showAgent('controller')">브림스톤</button>
+    </div>
+  </main>
+
+  <footer>
+    <a href="https://playvalorant.com/ko-kr/agents/">모든 요원 보기</a>
+  </footer>
+
+  <script src="character.js"></script>
 </body>
 </html>
