@@ -37,33 +37,31 @@ main {
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
-/* 이미지 박스 */
-/* 이미지 박스 */
 .agent-img-box {
-  width: 300px;
-  height: 400px;  /* 세로 크기를 조금 키워 균형 맞춤 */
+  width: 320px;           /* 이미지 비율에 맞게 살짝 조정 */
+  height: 420px;          /* 카드 크기보다 살짝 여유 */
   overflow: hidden;
   border-radius: 12px;
-  background: #111;
+  background-color: #000; /* 완전 검정 배경 */
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 15px;
 }
 
-/* 이미지 */
+/* 이미지 스타일 */
 .agent-img-box img {
   width: 100%;
-  height: auto;
-  max-height: 400px;     /* 세로 크기 한정 */
-  object-fit: contain;   /* 이미지 전체가 박스 안에 들어가게 */
-  background-color: #111;
+  height: 100%;
+  object-fit: cover;       /* 이미지가 꽉 차게 (비율 유지하며 넘치는 부분 자름) */
+  background-color: #000;  /* 로딩 중에도 검정 배경 유지 */
   transition: transform 0.4s ease;
 }
 
 .agent-img-box img:hover {
   transform: scale(1.05);
 }
+
 
 
 .agent-img-box img:hover {

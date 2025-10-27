@@ -4,8 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../page/gun.css">
 </head>
 <body>
-    <h1>총 소개</h1>
+      <header>
+    <h1>발로란트 총 소개</h1>
+    <div class="controls" aria-hidden="false">
+      <div class="search" role="search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="opacity:.7">
+          <path d="M21 21l-4.35-4.35" stroke="#fff" stroke-width="1.6" stroke-linecap="round"></path>
+          <circle cx="11" cy="11" r="6" stroke="#fff" stroke-width="1.6" fill="none"></circle>
+        </svg>
+        <input id="search" type="text" placeholder="무기명 검색 (예: Vandal)" aria-label="무기 검색">
+      </div>
+
+      <select id="filter" class="select" aria-label="무기 타입 필터">
+        <option value="all">모든 타입</option>
+        <option value="Rifle">Rifle</option>
+        <option value="SMG">SMG</option>
+        <option value="Sniper">Sniper</option>
+        <option value="Shotgun">Shotgun</option>
+        <option value="Sidearm">Sidearm</option>
+      </select>
+
+      <button id="reset" class="btn" title="필터 초기화">초기화</button>
+    </div>
+  </header>
+
+  <main class="grid" id="grid" aria-live="polite">
+    <!-- JS가 카드들을 동적으로 렌더링 -->
+  </main>
+
+  <!-- 모달 -->
+  <div id="backdrop" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal" role="document">
+      <div class="modal-left">
+        <img id="modal-img" src="" alt="">
+      </div>
+      <div class="modal-right">
+        <h2 id="modal-name"></h2>
+        <div class="specs" id="modal-specs"></div>
+        <p class="desc" id="modal-desc"></p>
+        <button class="close-btn" id="close-modal">닫기</button>
+      </div>
+    </div>
+  </div>
+  <script src="../page/gun.js"></script>
 </body>
 </html>
