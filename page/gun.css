@@ -194,3 +194,30 @@
     .weapon-card:focus-visible{
       box-shadow:0 0 0 3px rgba(240,93,35,0.18);
     }
+
+    .spec-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+.spec-grid div {
+  background: var(--card);
+  padding: 10px 12px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-size: 14px;
+}
+.spec-grid div strong {
+  color: #bfc6cc;
+  font-weight: 600;
+}
+.spec-grid .sub-spec {
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.5;
+  font-size: 13px;
+}
