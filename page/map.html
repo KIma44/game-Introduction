@@ -1,11 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Map</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>발로란트 맵 전략 분석</title>
+  <link rel="stylesheet" href="../page/map.css">
 </head>
 <body>
-    <h1>맵 소개</h1>
+
+  <header class="header">
+    <h1>VALORANT MAPS GUIDE</h1>
+    <p>맵별 전략과 추천 요원을 빠르게 찾아보세요.</p>
+
+    <div class="filter-bar">
+      <input type="text" id="search" placeholder="맵 이름 검색 (예: Haven)">
+      <select id="filter">
+        <option value="all">전체 보기</option>
+        <option value="teleporter">텔레포터 있음</option>
+        <option value="three-site">3 사이트</option>
+        <option value="mid">미드 중심</option>
+      </select>
+    </div>
+  </header>
+
+  <main class="maps-container">
+    <!-- Ascent -->
+    <section class="map-card" data-type="mid">
+      <img src="../images/maps/어센트.png" alt="어센트">
+      <div class="map-info">
+        <h2>어센트</h2>
+        <p class="map-desc">이탈리아 베니스 상공의 전장. 중앙 미드 장악이 핵심.</p>
+        <ul>
+          <li><strong>위치:</strong> 이탈리아 베니스</li>
+          <li><strong>특징:</strong> 개활지 중심 구조, 미드 통제 중요</li>
+          <li><strong>추천 요원:</strong> 소바, 킬조이, 제트</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Bind -->
+    <section class="map-card" data-type="teleporter">
+      <img src="../images/maps/바인드.png" alt="바인드">
+      <div class="map-info">
+        <h2>바인드</h2>
+        <p class="map-desc">모로코 사막의 전장. 텔레포터를 활용한 회전 전략.</p>
+        <ul>
+          <li><strong>위치:</strong> 모로코</li>
+          <li><strong>특징:</strong> 텔레포터 2개, 미드 없음</li>
+          <li><strong>추천 요원:</strong> 오멘, 레이즈, 브림스톤</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Haven -->
+    <section class="map-card" data-type="three-site">
+      <img src="../images/maps/헤이븐.png" alt="헤이븐">
+      <div class="map-info">
+        <h2>헤이븐</h2>
+        <p class="map-desc">세 개의 사이트를 가진 유일한 맵, 회전 판단이 중요.</p>
+        <ul>
+          <li><strong>위치:</strong> 인도</li>
+          <li><strong>특징:</strong> 3개 사이트 (A/B/C)</li>
+          <li><strong>추천 요원:</strong> Cypher, 소바, 제트</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Valorant Strategy Guide | Fan-made</p>
+  </footer>
+
+  <script src="../page/map.js"></script>
 </body>
 </html>

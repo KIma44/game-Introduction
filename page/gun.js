@@ -9,6 +9,7 @@ const weapons = [
       가격 : '500', 탄창 : '13'
     }
   },
+
   {
     id: 'spectre',
     name: '스팅어',
@@ -17,6 +18,7 @@ const weapons = [
     desc: '가성비 좋은 SMG. 근거리에서 빠른 연사.',
     specs: { 가격: '1100', 탄창: '20' }
   },
+
   {
     id: 'judge',
     name: '저지',
@@ -25,6 +27,7 @@ const weapons = [
     desc: '근거리 광역 데미지. 실내에서 매우 위력적.',
     specs: { 가격: '1850', 탄창: '5' }
   },
+
   {
     id: 'vandal',
     name: '밴달',
@@ -36,6 +39,7 @@ const weapons = [
       가격: '2900', 탄창: '25'
     }
   },
+
   {
     id: 'phantom',
     name: '팬텀',
@@ -44,6 +48,7 @@ const weapons = [
     desc: '근거리에서 높은 연사력과 낮은 반동, 소음 특성을 보유한 자동소총입니다.',
     specs: { 가격: '2900', 탄창: '30' }
   },
+
   {
     id : 'Odin',
     name : '오딘',
@@ -54,6 +59,7 @@ const weapons = [
       가격 : '3200', 탄창 : '100'
     }
   },
+
   {
     id: 'operator',
     name: '오퍼레이터',
@@ -62,6 +68,7 @@ const weapons = [
     desc: '한 방에 큰 데미지. 이동 시 속도 저하. 고위력 저격총.',
     specs: { 가격: '4700', 탄창: '5' }
   },
+  
 ];
 
 const grid = document.getElementById('grid');
@@ -103,29 +110,7 @@ function openModal(weapon) {
   modalDesc.textContent = weapon.desc;
   modalSpecs.innerHTML = '';
 
-  // 밴달일 때만 상세 테이블로 표시
-  if (weapon.id === 'vandal') {
-    const table = document.createElement('div');
-    table.className = 'spec-table';
-    table.innerHTML = `
-      <div class="spec-row"><span>달리기 속도</span><span>${weapon.specs.달리기_속도}</span></div>
-      <div class="spec-row"><span>장착 속도</span><span>${weapon.specs.장착_속도}</span></div>
-      <div class="spec-row"><span>재장전 속도</span><span>${weapon.specs.재장전_속도}</span></div>
-      <div class="spec-row"><span>연사 속도</span><span>${weapon.specs.연사_속도}</span></div>
-      <div class="spec-row"><span>초탄 퍼짐</span><span>${weapon.specs.초탄_퍼짐}</span></div>
-      <div class="spec-row"><span>피해량</span><span>${weapon.specs.피해량}</span></div>
-      <div class="spec-row"><span>보조 공격</span><span>${weapon.specs.보조공격}</span></div>
-    `;
-    modalSpecs.appendChild(table);
-  } else {
-    // 나머지 무기들은 기존처럼 간단히 표시
-    for (const k in weapon.specs) {
-      const s = document.createElement('div');
-      s.className = 'spec';
-      s.textContent = `${k}: ${weapon.specs[k]}`;
-      modalSpecs.appendChild(s);
-    }
-  }
+  
 
   backdrop.style.display = 'flex';
   backdrop.setAttribute('aria-hidden', 'false');

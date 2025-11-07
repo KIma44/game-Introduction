@@ -1,0 +1,90 @@
+body {
+  background-color: #0a0a0a;
+  color: #fff;
+  font-family: 'Pretendard', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 40px 0;
+  border-bottom: 1px solid #333;
+}
+
+header h1 {
+  font-size: 2.3rem;
+  color: #ff4655;
+  margin-bottom: 10px;
+}
+
+.filter-bar {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.filter-bar input, .filter-bar select {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #1a1a1a;
+  color: white;
+}
+
+.maps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.map-card {
+  display: flex;
+  gap: 30px;
+  background: #1a1a1a;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(255, 70, 85, 0.2);
+  transition: transform 0.3s;
+}
+
+.map-card:hover {
+  transform: scale(1.03);
+}
+
+.map-card img {
+  width: 350px;
+  border-radius: 10px;
+}
+
+.map-info h2 {
+  color: #ff4655;
+  font-size: 1.7rem;
+}
+
+.map-desc {
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.map-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.map-info li {
+  margin: 6px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #333;
+  color: #777;
+  font-size: 0.9rem;
+}
