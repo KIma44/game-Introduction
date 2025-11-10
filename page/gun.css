@@ -35,13 +35,53 @@
       letter-spacing:1px;
     }
 
-    /* 컨트롤 바 */
-    .controls{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      align-items:center;
-    }
+header {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column; /* 세로 배치 */
+  align-items: center;
+  gap: 16px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+/* nav 전체 폭 사용 + 중앙 정렬 */
+#introduction {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  background-color: #ffcc00;
+  padding: 15px 0;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+#introduction a {
+  color: #000;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+#introduction a:hover {
+  color: #f05d23;
+  transform: scale(1.05);
+}
+
+/* 검색창, 필터, 버튼 정렬 */
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
     .search{
       display:flex;
       background:var(--card);

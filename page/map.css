@@ -18,6 +18,15 @@ header h1 {
   margin-bottom: 10px;
 }
 
+#introduction {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: #ffcc00;
+    padding: 15px;
+    font-weight: bold;
+}
+
 .filter-bar {
   margin-top: 20px;
   display: flex;
