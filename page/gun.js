@@ -1,4 +1,35 @@
 const weapons = [
+   {
+    id : 'Classic',
+    name : '클래식',
+    type : '권총',
+    img : '../images/guns/클래식.png',
+    desc : '사격 방향에 있는 경우를 제외하고 40m 이상 거리에서 총성 들리지 않음',
+    specs : {
+      가격 : '0', 탄창 : '12'
+    }
+  },
+   {
+    id : 'Shorty',
+    name : '쇼티',
+    type : '권총',
+    img : '../images/guns/쇼티.png',
+    desc : '사격 방향에 있는 경우를 제외하고 40m 이상 거리에서 총성 들리지 않음',
+    specs : {
+      가격 : '300', 탄창 : '2'
+    }
+  },
+   {
+    id : 'FRIENDZY',
+    name : '프렌지',
+    type : '권총',
+    img : '../images/guns/프렌지.png',
+    desc : '사격 방향에 있는 경우를 제외하고 40m 이상 거리에서 총성 들리지 않음',
+    specs : {
+      가격 : '450', 탄창 : '15'
+    }
+  },
+  
   {
     id : 'Ghost',
     name : '고스트',
@@ -9,18 +40,44 @@ const weapons = [
       가격 : '500', 탄창 : '13'
     }
   },
+  {
+    id : 'Sherriff',
+    name : '셰리프',
+    type : '권총',
+    img : '../images/guns/셰리프.png',
+    desc : '사격 방향에 있는 경우를 제외하고 40m 이상 거리에서 총성 들리지 않음',
+    specs : {
+      가격 : '800', 탄창 : '6'
+    }
+  },
 
   {
-    id: 'spectre',
+    id: 'Stinger',
     name: '스팅어',
     type: '기관단총',
     img: '../images/guns/스팅어.png',
     desc: '가성비 좋은 SMG. 근거리에서 빠른 연사.',
     specs: { 가격: '1100', 탄창: '20' }
   },
-
   {
-    id: 'judge',
+    id: 'Spectre',
+    name: '스펙터',
+    type: '기관단총',
+    img: '../images/guns/스펙터.png',
+    desc: '가성비 좋은 SMG. 근거리에서 빠른 연사.',
+    specs: { 가격: '1600', 탄창: '30' }
+  },
+  
+  {
+    id: 'Bucky',
+    name: '버키',
+    type: '산탄총',
+    img: '../images/guns/버키.png',
+    desc: '근거리 광역 데미지. 실내에서 매우 위력적.',
+    specs: { 가격: '850', 탄창: '5' }
+  },
+  {
+    id: 'Judge',
     name: '저지',
     type: '산탄총',
     img: '../images/guns/저지.png',
@@ -28,6 +85,28 @@ const weapons = [
     specs: { 가격: '1850', 탄창: '5' }
   },
 
+  {
+    id: 'Bulldog',
+    name: '불독',
+    type: '소총',
+    img: '../images/guns/불독.png',
+    desc: `발로란트의 대표 돌격소총으로, 중거리~장거리 전투에 강력합니다. 
+    50m 거리에서도 헤드샷 한 방으로 처치가 가능한 높은 명중력을 가집니다.`,
+    specs: {
+      가격: '2050', 탄창: '24'
+    }
+  },
+  {
+    id: 'Guardian',
+    name: '가디언',
+    type: '소총',
+    img: '../images/guns/가디언.png',
+    desc: `발로란트의 대표 돌격소총으로, 중거리~장거리 전투에 강력합니다. 
+    50m 거리에서도 헤드샷 한 방으로 처치가 가능한 높은 명중력을 가집니다.`,
+    specs: {
+      가격: '2250', 탄창: '12'
+    }
+  },
   {
     id: 'vandal',
     name: '밴달',
@@ -51,6 +130,16 @@ const weapons = [
 
   {
     id : 'Odin',
+    name : '아레스',
+    type : '기관총',
+    img : '../images/guns/아레스.png',
+    desc : '연산 시간에 따른 연산 속도 up',
+    specs : {
+      가격 : '1600', 탄창 : '50'
+    }
+  },
+  {
+    id : 'Odin',
     name : '오딘',
     type : '기관총',
     img : '../images/guns/오딘.png',
@@ -61,7 +150,23 @@ const weapons = [
   },
 
   {
-    id: 'operator',
+    id: 'Marshall',
+    name: '마샬',
+    type: '저격소총',
+    img: '../images/guns/마샬.png',
+    desc: '한 방에 큰 데미지. 이동 시 속도 저하. 고위력 저격총.',
+    specs: { 가격: '950', 탄창: '5' }
+  },
+  {
+    id: 'Out of the way',
+    name: '아웃로',
+    type: '저격소총',
+    img: '../images/guns/아웃로.png',
+    desc: '한 방에 큰 데미지. 이동 시 속도 저하. 고위력 저격총.',
+    specs: { 가격: '2700', 탄창: '2' }
+  },
+  {
+    id: 'Operator',
     name: '오퍼레이터',
     type: '저격소총',
     img: '../images/guns/오퍼.png',
