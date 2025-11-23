@@ -1,4 +1,6 @@
 body {
+  width: 100%;
+  height: 100%;
   background: #0c0c17;
   color: #fff;
   font-family: Pretendard, sans-serif;
@@ -40,6 +42,15 @@ body {
 /* 현재 페이지 표시 */
 .nav-menu .active {
   border-bottom: 2px solid #be2edd;
+}
+
+.skill-box {
+  margin-top: 15px;
+  padding: 12px;
+  background: #222;
+  color: #fff;
+  border-radius: 8px;
+  border: 1px solid #444;
 }
 
 
@@ -171,10 +182,11 @@ main {
 }
 
 #agent-skills {
+  list-style-type: none;  /* ← bullet 제거 */
   text-align: left;
   list-style-type: disc;
   padding-left: 20px;
-  color: #ddd;
+  /* color: #ddd; */
 }
 
 /* 버튼 */
@@ -185,7 +197,7 @@ main {
 .button-box button {
   background-color: #f05d23;
   border: none;
-  color: white;
+  /* color: white; */
   padding: 10px 20px;
   border-radius: 8px;
   margin: 5px;
@@ -202,6 +214,9 @@ main {
 /* footer */
 footer {
   margin-top: 40px;
+  display: flex;
+  justify-content: center;
+
 }
 
 footer a {
@@ -212,3 +227,4 @@ footer a {
 footer a:hover {
   color: #fff;
 }
+

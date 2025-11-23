@@ -51,6 +51,14 @@ body {
     justify-content: center; /* 수평 중앙 */
 }
 
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  color: #222;
+}
+
+
 /* -------------------- 검색 영역 -------------------- */
 .search-wrapper {
     position: absolute;
