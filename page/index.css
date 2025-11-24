@@ -1,320 +1,233 @@
-/* -------------------- 전체 초기화 -------------------- */
 body {
-  background: #0c0c17;
-  color: #fff;
-  font-family: Pretendard, sans-serif;
-  margin: 0;
+background: #0c0c17;
+color: #fff;
+font-family: Pretendard, sans-serif;
+margin: 0;
 }
-
-/* 헤더 전체 */
-.header {
-  text-align: center;
-  padding: 30px 0 10px 0;
+.header-top {
+position: relative;
+display: flex;
+justify-content: center; 
+align-items: center;
+padding: 20px 50px;
 }
-
-/* 제목 */
-.header .title {
-  font-size: 2.2rem;
-  margin-bottom: 20px;
-}
-
-/* 네비게이션 */
-.nav-menu {
-  display: flex;
-  justify-content: center;
-  gap: 40px;    /* 링크 간 간격 */
-}
-
-.nav-menu a {
-  font-size: 1.2rem;
-  color: #fff;
-  text-decoration: none;
-  padding-bottom: 4px;
-  transition: 0.2s;
-}
-
-/* hover 효과 */
-.nav-menu a:hover {
-  color: #be2edd;
-}
-
-/* 현재 페이지 표시 */
-.nav-menu .active {
-  border-bottom: 2px solid #be2edd;
-}
-
-
 #title {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center; /* 수평 중앙 */
+font-size: 2.2rem;
+color: #fff;
+text-align: center;
+z-index: 2; 
 }
-
-.description {
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  color: #222;
-}
-
-
-/* -------------------- 검색 영역 -------------------- */
 .search-wrapper {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    align-items: center;
+position: absolute; 
+right: 50px;        
+top: 50%;
+transform: translateY(-50%);
+display: flex;
+align-items: center;
 }
-
 .search-btn {
-    width: 50px;
-    height: 50px;
-    background-color: #222;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    display: block;
-    z-index: 2;
+background: none;
+border: none;
+cursor: pointer;
 }
-
-.search-btn img {
-    width: 24px;
-    height: 24px;
-}
-
 .search-input-wrapper {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 50px;
-    background-color: #222;
-    border-radius: 25px;
-    padding: 0 15px;
-    width: 0;
-    overflow: hidden;
-    transition: width 0.3s ease;
-    z-index: 1;
+position: relative;
+width: 0;
+padding: 0;
+display: flex;
+align-items: center;
+background-color: #222;
+border-radius: 25px;
+overflow: hidden;
+transition: width 0.3s ease, padding 0.3s ease;
 }
-
-.search-input-wrapper.active {
-    width: 300px;
-    z-index: 3;
-}
-
-.search-input-wrapper.active ~ .search-btn {
-    display: none;
-}
-
-.search-input-wrapper .icon {
-    width: 20px;
-    margin-right: 10px;
-}
-
 .search-input-wrapper input {
-    flex: 1;
-    background: transparent;
-    border: none;
-    outline: none;
-    color: white;
-    font-size: 16px;
+flex: 1;
+background: transparent;
+border: none;
+outline: none;
+color: #fff;
+font-size: 16px;
+padding: 8px 12px;
 }
-
-.search-input-wrapper .close-icon {
-    color: #aaa;
-    cursor: pointer;
-    font-size: 20px;
-    margin-left: 10px;
+.search-input-wrapper.active {
+width: 250px;  
+padding: 0 10px;
 }
-
-/* -------------------- 네비게이션 메뉴 -------------------- */
-#introduction {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    background-color: #ffcc00;
-    padding: 15px;
-    font-weight: bold;
+.close-icon {
+color: #aaa;
+cursor: pointer;
+font-size: 20px;
+margin-left: 10px;
 }
-
-#introduction a {
-    text-decoration: none;
-    color: #202020;
-    transition: transform 0.2s;
+.nav-menu {
+display: flex;
+justify-content: center;
+gap: 40px;
+margin-bottom: 20px;
 }
-
-#introduction a:hover {
-    color: crimson;
-    transform: scale(1.1);
+.nav-menu a {
+font-size: 1.2rem;
+color: #fff;
+text-decoration: none;
+padding-bottom: 4px;
+transition: 0.2s;
 }
-
-/* -------------------- 컨테이너 -------------------- */
+.nav-menu a:hover {
+color: #be2edd;
+}
+.nav-menu .active {
+border-bottom: 2px solid #be2edd;
+}
 #container {
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+max-width: 1000px;
+margin: 30px auto;
+padding: 20px;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-
-/* -------------------- 본문 설명 -------------------- */
+.description {
+display: flex;
+flex-direction: column;
+align-items: center;
+color: #fff;
+text-align: center;
+}
 .description h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+font-size: 1.5rem;
+margin-bottom: 10px;
 }
-
 .description p {
-    font-size: 1.1rem;
-    margin-bottom: 30px;
+font-size: 1.1rem;
+margin-bottom: 30px;
 }
-
-/* -------------------- 게임 진행 단계 -------------------- */
 .gamemode-flow {
-    max-width: 700px;
-    margin: 50px auto;
-    padding: 30px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    border-left: 5px solid #007bff;
+max-width: 700px;
+margin: 50px auto;
+padding: 30px;
+border-radius: 10px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+border-left: 5px solid #ff2200;
 }
-
 .gamemode-flow h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2rem;
-    color: #202020;
+text-align: center;
+margin-bottom: 40px;
+font-size: 2rem;
+color: #ffcc00;
 }
-
 .gamemode-flow .step {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 30px;
-    padding-left: 10px;
-    position: relative;
-    border-left: 2px solid #ddd;
+display: flex;
+align-items: flex-start;
+margin-bottom: 30px;
+padding-left: 10px;
+position: relative;
+border-left: 2px solid #555;
 }
-
 .gamemode-flow .step::before {
-    content: '';
-    position: absolute;
-    left: -2px;
-    top: 20px;
-    width: 12px;
-    height: 12px;
-    background-color: #007bff;
-    border-radius: 50%;
-    border: 2px solid white;
-    z-index: 1;
+content: '';
+position: absolute;
+left: -2px;
+top: 20px;
+width: 12px;
+height: 12px;
+background-color: #ff2600;
+border-radius: 50%;
+border: 2px solid white;
+z-index: 1;
 }
-
 .gamemode-flow .circle {
-    flex-shrink: 0;
-    width: 40px;
-    height: 40px;
-    background: #007bff;
-    color: white;
-    font-weight: bold;
-    font-size: 1.2rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 20px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+flex-shrink: 0;
+width: 40px;
+height: 40px;
+background: #ff1e00;
+color: white;
+font-weight: bold;
+font-size: 1.2rem;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-right: 20px;
+box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
-
 .gamemode-flow .text h3 {
-    margin: 0 0 8px;
-    font-size: 1.2rem;
-    color: #333;
+margin: 0 0 8px;
+font-size: 1.2rem;
+color: #ffcc00;
 }
-
 .gamemode-flow .text p {
-    margin: 0;
-    color: #555;
-    font-size: 1rem;
-    line-height: 1.5;
+margin: 0;
+color: #fff;
+font-size: 1rem;
+line-height: 1.5;
 }
-
-/* -------------------- 이미지 슬라이더 -------------------- */
 .image-slider img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-top: 20px;
+width: 100%;
+max-width: 100%;
+height: auto;
+border-radius: 10px;
+margin-top: 20px;
 }
-
-/* -------------------- 발로란트 주요 특징 -------------------- */
 .features {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #fafafa;
+text-align: center;
+padding: 50px 20px;
 }
-
 .features h2 {
-    font-size: 2rem;
-    margin-bottom: 40px;
+font-size: 2rem;
+margin-bottom: 40px;
+color: #ffcc00;
 }
-
 .feature-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+display: flex;
+justify-content: center;
+gap: 30px;
+flex-wrap: wrap;
 }
-
 .feature {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    max-width: 220px;
-    transition: transform 0.3s ease;
+background: #222;
+padding: 20px;
+border-radius: 12px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+max-width: 220px;
+transition: transform 0.3s ease;
+text-align: center;
 }
-
 .feature:hover {
-    transform: translateY(-10px);
+transform: translateY(-10px);
 }
-
 .feature img {
-    width: 60px;
-    margin-bottom: 15px;
+width: 60px;
+height: 60px;
+margin-bottom: 15px;
 }
-
 .feature h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+font-size: 1.2rem;
+margin-bottom: 10px;
+color: #ffcc00;
 }
-
 .feature p {
-    font-size: 0.95rem;
-    color: #555;
+font-size: 0.95rem;
+color: #ccc;
 }
-
-/* -------------------- 푸터 -------------------- */
 footer {
-    margin-top: 40px;
-    background-color: #202020;
-    padding: 20px 0;
+width: 100%;
+padding: 30px 0;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+background-color: #202020;
 }
-
 #links {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
+display: flex;
+justify-content: center;
+gap: 20px;
+flex-wrap: wrap;
 }
-
 #links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+color: #fff;
+text-decoration: none;
+font-weight: bold;
 }
-
 #links a:hover {
-    color: #ffcc00;
+color: #ffcc00;
 }

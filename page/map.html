@@ -1,195 +1,51 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>발로란트 맵 전략 분석</title>
-  <link rel="stylesheet" href="../page/map.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>발로란트 맵 전략 분석</title>
+<link rel="stylesheet" href="../page/map.css">
 </head>
 <body>
-
 <header class="header">
-  <h1 class="title">맵 소개</h1>
-
-  <nav class="nav-menu">
-    <a href="index.html">홈</a>
-    <a href="character.html">캐릭터</a>
-    <a href="gun.html" >총</a>
-    <a href="map.html" class="active">맵</a>
-    <a href="night market.html">야시장</a>
-  </nav>
-  <p>맵별 전략과 추천 요원을 빠르게 찾아보세요.</p>
+<h1 class="title">발로란트 맵 전략 분석</h1>
+<p class="subtitle">맵별 핵심 포인트, 추천 요원, 모듈형 프로 팁까지 — 자동 생성형</p>
+<nav class="nav-menu">
+<a href="index.html">홈</a>
+<a href="character.html">캐릭터</a>
+<a href="gun.html">총</a>
+<a href="map.html" class="active">맵</a>
+<a href="night market.html">야시장</a>
+</nav>
 </header>
+<main class="container">
+<div class="controls">
+<input id="search" placeholder="맵 이름 검색">
+<select id="filter">
+<option value="all">전체 보기</option>
+<option value="teleporter">텔레포터 있음</option>
+<option value="three-site">3 사이트</option>
+<option value="mid">미드 중심</option>
+</select>
+<select id="sort">
+<option value="default">정렬: 기본</option>
+<option value="name">이름 A→Z</option>
+<option value="difficulty-low">난이도 낮은순</option>
+<option value="difficulty-high">난이도 높은순</option>
+<option value="type">맵 타입 순</option>
+</select>
+<button id="reset">초기화</button>
+</div>
+<section id="maps" class="maps-container"></section>
+</main>
 
-    <div class="filter-bar">
-      <input type="text" id="search" placeholder="맵 이름 검색 (예: Haven)">
-      <select id="filter">
-        <option value="all">전체 보기</option>
-        <option value="teleporter">텔레포터 있음</option>
-        <option value="three-site">3 사이트</option>
-        <option value="mid">미드 중심</option>
-      </select>
-    </div>
-  </header>
-
-  <main class="maps-container">
-    <section class="map-card" data-type="mid">
-      <img src="../images/maps/스플릿.png" alt="스플릿">
-      <div class="map-info">
-        <h2>스플릿</h2>
-        <p class="map-desc">두 개의 로프와 좁은 회랑이 특징인 고층 도시 맵.</p>
-        <ul>
-          <li><strong>위치:</strong> 일본</li>
-          <li><strong>특징:</strong> 미드 장악이 매우 중요, 로프 활용 가능</li>
-          <li><strong>추천 요원:</strong> 세이지, 레이즈, 바이퍼</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Icebox -->
-    <section class="map-card" data-type="mid">
-      <img src="../images/maps/아이스박스.png" alt="아이스박스">
-      <div class="map-info">
-        <h2>아이스박스</h2>
-        <p class="map-desc">복층 구조가 많은 북극 기지 맵.</p>
-        <ul>
-          <li><strong>위치:</strong> 러시아</li>
-          <li><strong>특징:</strong> 복잡한 수직 구조, 앵글이 많음</li>
-          <li><strong>추천 요원:</strong> 바이퍼, 소바, 제트</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Fracture -->
-    <section class="map-card" data-type="mid">
-      <img src="../images/maps/프렉처.png" alt="프랙처">
-      <div class="map-info">
-        <h2>프랙처</h2>
-        <p class="map-desc">독특한 Y자형 구조와 공격 측 스폰이 양쪽에 위치.</p>
-        <ul>
-          <li><strong>위치:</strong> 미국</li>
-          <li><strong>특징:</strong> 두 방향 스폰, 빠른 회전 구조</li>
-          <li><strong>추천 요원:</strong> 브리치, 레이즈, 오멘</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Pearl -->
-    <section class="map-card" data-type="mid">
-      <img src="../images/maps/펄.png" alt="펄">
-      <div class="map-info">
-        <h2>펄</h2>
-        <p class="map-desc">미드 중심의 단순하지만 전략적인 맵.</p>
-        <ul>
-          <li><strong>위치:</strong> 포르투갈(수중 도시)</li>
-          <li><strong>특징:</strong> 미드 라인이 가장 중요</li>
-          <li><strong>추천 요원:</strong> 킬조이, 바이퍼, 소바</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Lotus -->
-    <section class="map-card" data-type="three-site">
-      <img src="../images/maps/로터스.png" alt="로터스">
-      <div class="map-info">
-        <h2>로터스</h2>
-        <p class="map-desc">회전문과 세 개 사이트 구조를 가진 독특한 맵.</p>
-        <ul>
-          <li><strong>위치:</strong> 인도 유적</li>
-          <li><strong>특징:</strong> 회전문 / 3 사이트</li>
-          <li><strong>추천 요원:</strong> 오멘, 페이드, 스카이</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Sunset -->
-    <section class="map-card" data-type="mid">
-      <img src="../images/maps/선셋.png" alt="썬셋">
-      <div class="map-info">
-        <h2>썬셋</h2>
-        <p class="map-desc">미드가 크게 중요하며 LA 거리 기반 맵.</p>
-        <ul>
-          <li><strong>위치:</strong> 미국 LA</li>
-          <li><strong>특징:</strong> 넓은 미드, 단순한 구조</li>
-          <li><strong>추천 요원:</strong> 오멘, 소바, 레이나</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Abyss -->
-    <section class="map-card" data-type="mid">
-      <img src="../images/maps/어비스.png" alt="아비스">
-      <div class="map-info">
-        <h2>아비스</h2>
-        <p class="map-desc">구덩이 추락으로 즉사하는 트랩이 있는 독특한 맵.</p>
-        <ul>
-          <li><strong>위치:</strong> 알 수 없음</li>
-          <li><strong>특징:</strong> 낙사 가능 / 좁은 길</li>
-          <li><strong>추천 요원:</strong> 제트, 레이즈, 요루</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Breeze -->
-    <section class="map-card" data-type="mid">
-      <img src="../images/maps/브리즈.png" alt="브리즈">
-      <div class="map-info">
-        <h2>브리즈</h2>
-        <p class="map-desc">넓은 개활지와 긴 사거리 교전이 특징.</p>
-        <ul>
-          <li><strong>위치:</strong> 해변(카리브 해 느낌)</li>
-          <li><strong>특징:</strong> 매우 넓은 거리 / 롱 라인</li>
-          <li><strong>추천 요원:</strong> 체임버, 소바, 바이퍼</li>
-        </ul>
-      </div>
-    </section>
-      <section class="map-card" data-type="mid">
-      <img src="../images/maps/어센트.png" alt="어센트">
-      <div class="map-info">
-        <h2>어센트</h2>
-        <p class="map-desc">이탈리아 베니스 상공의 전장. 중앙 미드 장악이 핵심.</p>
-        <ul>
-          <li><strong>위치:</strong> 이탈리아 베니스</li>
-          <li><strong>특징:</strong> 개활지 중심 구조, 미드 통제 중요</li>
-          <li><strong>추천 요원:</strong> 소바, 킬조이, 제트</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Bind -->
-    <section class="map-card" data-type="teleporter">
-      <img src="../images/maps/바인드.png" alt="바인드">
-      <div class="map-info">
-        <h2>바인드</h2>
-        <p class="map-desc">모로코 사막의 전장. 텔레포터를 활용한 회전 전략.</p>
-        <ul>
-          <li><strong>위치:</strong> 모로코</li>
-          <li><strong>특징:</strong> 텔레포터 2개, 미드 없음</li>
-          <li><strong>추천 요원:</strong> 오멘, 레이즈, 브림스톤</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Haven -->
-    <section class="map-card" data-type="three-site">
-      <img src="../images/maps/헤이븐.png" alt="헤이븐">
-      <div class="map-info">
-        <h2>헤이븐</h2>
-        <p class="map-desc">세 개의 사이트를 가진 유일한 맵, 회전 판단이 중요.</p>
-        <ul>
-          <li><strong>위치:</strong> 인도</li>
-          <li><strong>특징:</strong> 3개 사이트 (A/B/C)</li>
-          <li><strong>추천 요원:</strong> Cypher, 소바, 제트</li>
-        </ul>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <p>© 2025 Valorant Strategy Guide | Fan-made</p>
-  </footer>
-
-  <script src="../page/map.js"></script>
+<div id="modalBackdrop" class="modal-backdrop">
+<div class="modal">
+<button id="closeModal" class="close-btn">✕</button>
+<div id="modalContent"></div>
+</div>
+</div>
+<footer class="footer">© 2025 Valorant Strategy Guide | Fan-made</footer>
+<script src="../page/map.js"></script>
 </body>
 </html>

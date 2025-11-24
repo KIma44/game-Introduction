@@ -1,59 +1,48 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>발로란트 요원 소개</title>
-  <link rel="stylesheet" href="../page/character.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>발로란트 요원 소개</title>
+<link rel="stylesheet" href="../page/character.css">
 </head>
-
 <body>
 <header class="header">
-  <h1 class="title">캐릭터 소개</h1>
-
-  <nav class="nav-menu">
-    <a href="index.html">홈</a>
-    <a href="character.html" class="active">캐릭터</a>
-    <a href="gun.html">총</a>
-    <a href="map.html">맵</a>
-    <a href="night market.html">야시장</a>
-  </nav>
+<h1 class="title">캐릭터 소개</h1>
+<nav class="nav-menu">
+<a href="index.html">홈</a>
+<a href="character.html" class="active">캐릭터</a>
+<a href="gun.html">총</a>
+<a href="map.html">맵</a>
+<a href="night market.html">야시장</a>
+</nav>
 </header>
-
 <main>
-  <div class="agent-card">
-    <div class="agent-img-box">
-      <img id="agent-img" src="../images/character/물음표.png">
-    </div>
-
-    <h2 id="agent-name">기본적인 요원 5명</h2>
-    <p id="agent-role">역할분달 5개로 나누어 있다</p>
-    <p id="agent-description">
-      기본 캐릭터로 5명 요원이 있다 요원들과의 역할이 있다
-    </p>
-
-    <!-- 스킬 버튼 리스트 -->
-    <ul id="agent-skills"></ul>
-
-    <!-- 스킬 설명 표시 영역 -->
-    <div id="skill-description" class="skill-box">
-      스킬을 선택하세요.
-    </div>
-  </div>
-
-  <div class="button-box">
-    <button onclick="showAgent('duelist')">제트</button>
-    <button onclick="showAgent('닉스')">닉스</button>
-    <button onclick="showAgent('initiator')">소바</button>
-    <button onclick="showAgent('sentinel')">세이지</button>
-    <button onclick="showAgent('controller')">브림스톤</button>
-  </div>
+<div class="agent-card">
+<div class="agent-img-box">
+<img id="agent-img" src="../images/character/물음표.png">
+</div>
+<h2 id="agent-name">기본적인 요원 5명</h2>
+<p id="agent-role">역할분달 5개로 나누어 있다</p>
+<p id="agent-description">
+기본 캐릭터로 5명 요원이 있다 요원들과의 역할이 있다
+</p>
+<ul id="agent-skills"></ul>
+<div id="skill-description" class="skill-box">
+스킬을 선택하세요.
+</div>
+</div>
+<div class="button-box">
+<button onclick="showAgent('제트')">제트</button>
+<button onclick="showAgent('닉스')">닉스</button>
+<button onclick="showAgent('소바')">소바</button>
+<button onclick="showAgent('세이지')">세이지</button>
+<button onclick="showAgent('브림스톤')">브림스톤</button>
+</div>
 </main>
-
 <footer id = "footer">
-  <a href="https://playvalorant.com/ko-kr/agents/">모든 요원 보기</a>
+<a href="https://playvalorant.com/ko-kr/agents/">모든 요원 보기</a>
 </footer>
-
 <script src="../page/character.js"></script>
 </body>
 </html>
