@@ -57,7 +57,6 @@ switch (rarity) {
 case "셀렉트 에디션": return "rarity-select";
 case "디럭스 에디션": return "rarity-deluxe";
 case "프리미엄 에디션": return "rarity-premium";
-case "익스클루시브 에디션": return "rarity-exclusive";
 case "울트라 에디션": return "rarity-ultra";
 default: return "";
 }
@@ -117,5 +116,6 @@ modalPrice.textContent =
 closeBtn.onclick = () => (modal.style.display = "none");
 createNightMarket();
 document.getElementById("resetBtn").onclick = () => {
-createNightMarket();
+  modal.style.display = "none";
+  createNightMarket(); 
 };

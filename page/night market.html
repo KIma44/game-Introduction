@@ -17,21 +17,43 @@
     <a href="night market.html" class="active">야시장</a>
   </nav>
 </header>
-  <main class="night-market-wrapper">
+
+<main class="night-layout">
+
+  <!-- 오른쪽 스킨 카드 중앙 배치 -->
+  <div class="night-market-wrapper">
     <div class="night-market-border">
+      
+      <!-- 카드 위 중앙 안내 텍스트 -->
+      <div class="market-info-overlay">
+        🌙 야시는 랜덤으로 선택된 6개의 스킨을 특별 할인 가격에 제공합니다!
+        <div>
+          할인율은 1%~49%까지 적용됩니다. 프리미엄은 최소 2장 나옵니다
+        </div>
+      </div>
+   
+
+      <!-- 스킨 카드 그리드 -->
       <section id="marketContainer" class="market-grid"></section>
+
+      <!-- 초기화 버튼 -->
       <button id="resetBtn" class="reset-btn">초기화</button>
     </div>
-  </main>
-  <div class="modal" id="skinModal">
-      <span class="close">&times;</span>
-      <img id="modalImg" alt="스킨 이미지" />
-      <h2 id="modalName"></h2>
-      <p id="modalWeapon"></p>
-      <p id="modalRarity"></p>
-      <p id="modalPrice"></p>
-      <p id="modalDiscount"></p>
   </div>
-  <script src="../page/night market.js"></script>
+
+</main>
+
+<!-- 스킨 모달 -->
+<div class="modal" id="skinModal">
+  <span class="close">&times;</span>
+  <img id="modalImg" alt="스킨 이미지" />
+  <h2 id="modalName"></h2>
+  <p id="modalWeapon"></p>
+  <p id="modalRarity"></p>
+  <p id="modalPrice"></p>
+  <p id="modalDiscount"></p>
+</div>
+
+<script src="../page/night market.js"></script>
 </body>
 </html>
